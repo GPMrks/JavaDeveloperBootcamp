@@ -24,13 +24,13 @@ public class ExemploStreamAPI {
 
         System.out.println("Contagem: " + estudantes.stream().count());
 
-        System.out.println("Maior numero de letras: " + estudantes.stream().max(Comparator.comparingInt(String::length)));
+        System.out.println("Maior número de letras: " + estudantes.stream().max(Comparator.comparingInt(String::length)));
 
-        System.out.println("Maior numero de letras: " + estudantes.stream().min(Comparator.comparingInt(String::length)));
+        System.out.println("Maior número de letras: " + estudantes.stream().min(Comparator.comparingInt(String::length)));
 
         System.out.println("Com a letra r no nome: " + estudantes.stream().filter((estudante) -> estudante.toLowerCase().contains("r")).collect(Collectors.toList()));
 
-        System.out.println("Retorna uma nova colecao com a quantidade de letras: " + estudantes.stream().map(estudante -> estudante.concat(" - ").concat(String.valueOf(estudante.length()))).collect(Collectors.toList()));
+        System.out.println("Retorna uma nova coleção com a quantidade de letras: " + estudantes.stream().map(estudante -> estudante.concat(" - ").concat(String.valueOf(estudante.length()))).collect(Collectors.toList()));
 
         System.out.println("Retorna os 3 primeiros elementos: " + estudantes.stream().limit(3).collect(Collectors.toList()));
 
@@ -43,12 +43,12 @@ public class ExemploStreamAPI {
 
         System.out.println("Algum elemento contem a letra T? " + estudantes.stream().anyMatch((elemento) -> elemento.contains("T")));
 
-        System.out.println("Nao tem nenhum elemento com 'a' minusculo no nome? " + estudantes.stream().noneMatch((elemento) -> elemento.contains("a")));
+        System.out.println("Não tem nenhum elemento com 'a' minúsculo no nome? " + estudantes.stream().noneMatch((elemento) -> elemento.contains("a")));
 
-        System.out.println("Retorna o primeiro elemento da colecao: ");
+        System.out.println("Retorna o primeiro elemento da coleção: ");
         estudantes.stream().findFirst().ifPresent(System.out::println);
 
-        System.out.println("Operacao Encadeada: ");
+        System.out.println("Operação Encadeada: ");
         System.out.println(estudantes.stream()
                 .peek(System.out::println)
                 .map(estudante -> estudante.concat(" - ").concat(String.valueOf(estudante.length())))
