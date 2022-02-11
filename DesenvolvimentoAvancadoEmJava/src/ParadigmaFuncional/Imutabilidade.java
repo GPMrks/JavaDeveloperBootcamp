@@ -1,3 +1,5 @@
+package ParadigmaFuncional;
+
 import java.sql.SQLOutput;
 import java.util.function.UnaryOperator;
 
