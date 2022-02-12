@@ -3,6 +3,6 @@ package ParadigmaFuncional;
 @FunctionalInterface
 public interface FatorialLambda {
 
-    public int fatorial(int value);
+    int fatorial(int value);
 
 }

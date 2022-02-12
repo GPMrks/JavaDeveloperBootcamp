@@ -1,5 +1,7 @@
 package InterfacesFuncionais;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -22,6 +24,21 @@ public class Iteracoes {
 
         Stream.of(nomes)
                 .forEach(nome -> System.out.println("Impresso pelo forEach: " + nome)); //referencia System.out::println
+
+        Stream.of(numeros)
+                .map(numero -> numero * 2)
+                .forEach(System.out::println);
+
+        //Outra forma de se utilizar o Stream, como visto no curso Implementação de Collections e Stream em Java
+        List<String> profissoes = new ArrayList<>();
+        profissoes.add("Desenvolvedor");
+        profissoes.add("Testador");
+        profissoes.add("Gerente de Projeto");
+        profissoes.add("Gerente de Qualidade");
+
+        profissoes.stream()
+                .filter(profissao -> profissao.startsWith("Gerente"))
+                .forEach(System.out::println);
 
     }
 
