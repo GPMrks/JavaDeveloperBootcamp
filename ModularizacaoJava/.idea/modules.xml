@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ModularizacaoJava.iml" filepath="$PROJECT_DIR$/ModularizacaoJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modularizacao.java.core/modularizacao.java.core.iml" filepath="$PROJECT_DIR$/modularizacao.java.core/modularizacao.java.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modularizacao.java.utils/modularizacao.java.utils.iml" filepath="$PROJECT_DIR$/modularizacao.java.utils/modularizacao.java.utils.iml" />
+    </modules>
+  </component>
+</project>
