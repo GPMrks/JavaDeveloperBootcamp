@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // ======= Necessarios para a parte 1 do curso. =========
+
+    // Notar que essa API nao faz o programa rodar, apenas valida as annotations (pois sao so as especificacoes)
+    // https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api
+    //compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+
+    // Drive JDBC que sera utilizado pelos frameworks que implementam o JPA
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
+
+    // === Necessarios para a parte 2 do curso. Essas sao as implementacoes do JPA (Hibernate e EclipseLink) e o automatizador de criacao de Metamodels ===
+
+    // Implementacao Hibernate
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.12.Final'
+
+    // Implementacao EclipseLink
+    // https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink
+    //compile group: 'org.eclipse.persistence', name: 'eclipselink', version: '2.7.6'
+
+    // Automatizador de criacao de Metamodels
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-jpamodelgen
+    annotationProcessor('org.hibernate:hibernate-jpamodelgen:5.4.13.Final')
+
+    //implementation group: 'org.eclipse.persistence', name: 'eclipselink', version: '2.7.6'
+    implementation 'org.hibernate:hibernate-core:5.6.5.Final'
+    // https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api
+    // hibernate e o eclipse link já trazem o jpa - implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+    implementation 'org.jetbrains:annotations:20.1.0'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+    //implementation 'org.postgresql:postgresql:42.3.3'
+    //implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.28'
+    implementation 'org.projectlombok:lombok:1.18.20'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
