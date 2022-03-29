@@ -22,7 +22,7 @@ public class Desafio1 {
 
             } else {
                 vezes = 1;
-                numeros.put(numero, vezes);
+                numeros.putIfAbsent(numero, vezes);
             }
 
             numeros.put(numero, vezes);
